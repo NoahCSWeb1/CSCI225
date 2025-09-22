@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/main.css">
+  <title>Contact Me</title>
+</head>
+<body>
+
+<!--Way to get back home-->
+  <p><a href="index.html">&larr; Back to Home</a></p>
+
+  <h1>My Video</h1>
+
+<!--The Youtube Video-->
+<iframe width="560" 
+    height="315" 
+    src="https://www.youtube.com/embed/btHpHjabRcc?si=emF2FrratVmcJbRj" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+</iframe>
+
+  <h1>Feedback Form</h1>
+
+<!--The Form-->
+  <form name="feedback" action="#" method="post">
+
+    <!--Name-->
+    <p>
+      <label for="fname">First name:</label><br>
+      <input id="fname"
+             name="fname"
+             placeholder="anonymous"
+             required
+             autofocus
+             pattern="[A-Za-z\s\-]+"
+             title="Letters, spaces, and dashes only">
+    </p>
+
+    <p>
+      <label for="lname">Last name:</label><br>
+      <input id="lname"
+             name="lname"
+             placeholder="anonymous"
+             required
+             pattern="[A-Za-z\s\-]+"
+             title="Letters, spaces, and dashes only">
+    </p>
+
+    <!--Radio Buttons and Selection Box-->
+    <p>
+      Recommend this website?<br>
+      <label><input type="radio" name="recommend" value="yes"> Yes</label>
+      <label><input type="radio" name="recommend" value="no"> No</label>
+    </p>
+
+    <p>
+      <label for="favorite">Favorite website:</label><br>
+      <select id="favorite" name="favorite">
+        <option value="Google">Google</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Twitter">Twitter</option>
+        <option value="Time">Time</option>
+        <option value="YouTube">YouTube</option>
+      </select>
+    </p>
+
+    <!--Rating-->
+    <p>
+      <label for="rating">Rate this website (1 to 10):</label><br>
+      <input id="rating"
+             name="rating"
+             type="range"
+             min="1" max="10" step="1"
+             value="5"
+             oninput="rateValue.value = this.value">
+      <output id="rateValue">5</output>
+    </p>
+
+    <!-- Comments -->
+    <p>
+      <label for="comment">Additional comments:</label><br>
+      <textarea id="comment"
+                name="comment"
+                rows="4" cols="40"
+                maxlength="500"
+                placeholder="Any additional comments? (Max: 500 Char)"></textarea>
+    </p>
+
+    <!--Submit-->
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+
+  </form>
+
+  <hr>
+
+  <!--Way to get back home-->
+  <p><a href="index.html">&larr; Back to Home</a></p>
+
+</body>
+</html>
